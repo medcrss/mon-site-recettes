@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Accueil - Mon site de recettes</title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
-    <nav>
-        <a href="/">Accueil</a>
-        <a href="/recettes">Recettes</a>
-    </nav>
-    <h1>Bienvenue sur mon site Flask hébergé !</h1>
-    <p>Explorez de délicieuses recettes faites maison.</p>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Accueil - Recettes{% endblock %}
+
+{% block content %}
+    <div class="text-center">
+        <h1 class="mb-3">Bienvenue sur mon site Flask hébergé !</h1>
+        <p class="lead">Explorez de délicieuses recettes faites maison.</p>
+    </div>
+{% endblock %}

@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Recettes</title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
-    <nav>
-        <a href="/">Accueil</a>
-        <a href="/recettes">Recettes</a>
-    </nav>
-    <h1>Nos recettes</h1>
-    <ul>
+{% extends "base.html" %}
+
+{% block title %}Recettes - Recettes Maison{% endblock %}
+
+{% block content %}
+    <h2 class="mb-4">Nos recettes</h2>
+    <div class="row">
         {% for recette in recettes %}
-            <li><strong>{{ recette.titre }}</strong> – {{ recette.description }}</li>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ recette.titre }}</h5>
+                        <p class="card-text">{{ recette.description }}</p>
+                    </div>
+                </div>
+            </div>
         {% endfor %}
-    </ul>
-</body>
-</html>
+    </div>
+{% endblock %}
