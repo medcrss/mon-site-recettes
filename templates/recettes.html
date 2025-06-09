@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Recettes</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Accueil</a>
+        <a href="/recettes">Recettes</a>
+    </nav>
+    <h1>Nos recettes</h1>
+    <ul>
+        {% for recette in recettes %}
+            <li><strong>{{ recette.titre }}</strong> – {{ recette.description }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
